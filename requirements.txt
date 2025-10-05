@@ -15,3 +15,8 @@ whitenoise
 
 # (If you use Pillow for images)
 Pillow
+djangorestframework
+gunicorn
+django-environ
+python-decouple
+
