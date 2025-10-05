@@ -1,5 +1,17 @@
-asgiref==3.8.1
-Django==5.0.3
-django-environ==0.11.2
-sqlparse==0.5.1
-python-decouple==3.8
+# Django and core dependencies
+Django>=4.2,<5.1
+gunicorn
+
+# Environment & Configuration
+django-environ
+python-decouple
+
+# Database and utility packages
+sqlparse
+
+# Optional (good to have)
+tzdata
+whitenoise
+
+# (If you use Pillow for images)
+Pillow
