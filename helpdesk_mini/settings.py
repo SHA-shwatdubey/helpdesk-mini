@@ -135,3 +135,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     # os.path.join(BASE_DIR, 'static'), # Agar koi 'static' folder BASE_DIR mein hai
 ]
+
+# settings.py file mein
+ALLOWED_HOSTS = [
+    'helpdesk-mini-6.onrender.com',  # <-- Yeh line add karein
+    '127.0.0.1',                     # Localhost for testing
+    '.localhost',
+]
