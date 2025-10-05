@@ -122,3 +122,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+
+# Jahan se files collect hongi (IMPORTANT!)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Static files ka URL prefix (usually /static/ hi rehta hai)
+STATIC_URL = '/static/'
+
+# Agar aapki project-level static files hain
+STATICFILES_DIRS = [
+    # os.path.join(BASE_DIR, 'static'), # Agar koi 'static' folder BASE_DIR mein hai
+]
