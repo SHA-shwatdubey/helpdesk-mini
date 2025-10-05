@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ ticket.title }}</h1>
+<p>{{ ticket.description }}</p>
+<p>Status: {{ ticket.status }}</p>
+<p>SLA Deadline: {{ ticket.sla_deadline }}</p>
+<p>Assigned to: {{ ticket.assigned_to }}</p>
+<p>Created by: {{ ticket.created_by }}</p>
+<p>Comments:</p>
+<ul>
+  {% for comment in ticket.comments.all %}
+    <li>{{ comment.user.username }}: {{ comment.content }} ({{ comment.created_at }})</li>
+  {% endfor %}
+</ul>
+<form method="post" action="/tickets/{{ ticket.id }}/comments">
+  {% csrf_token %}
+  <textarea name="content"></textarea><br>
+  <button type="submit">Add Comment</button>
+</form>
+{% endblock %}

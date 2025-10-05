@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Create New Ticket</h1>
+<form method="post">
+  {% csrf_token %}
+  <label>Title:</label><input type="text" name="title"><br>
+  <label>Description:</label><textarea name="description"></textarea><br>
+  <label>SLA Deadline:</label><input type="datetime-local" name="sla_deadline"><br>
+  <button type="submit">Create</button>
+</form>
+{% endblock %}
